@@ -1,5 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 *{
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
+section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+}
+
+header .navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    position: relative;
+    max-width: 80px;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: logoFade 1s ease forwards;
+}
+
+@keyframes logoFade {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+header .menu {
+    position: relative;
+    display: flex;
+}
+
+header .menu li {
+    list-style: none;
+}
+
+header .menu li a {
+    position: relative;
+    display: inline-block;
+    color: #333;
+    font-weight: 400;
+    font-size: 18px;
+    margin-left: 40px;
+    padding: 20px 16px;
+    text-decoration: none;
+    transition: color 0.3s ease; /* transição do texto */
+}
+
+/* Linha superior */
+header .menu li a::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 0;
+    height: 4px;
+    background: #180f4a;
+    transition: width 0.3s ease, left 0.3s ease; /* animação da linha */
+}
+
+header .menu li a:hover {
+    color: #ff2978;
+}
+
+header .menu li a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+#botao {
+    background: #180f4a;
+    padding: 10px 22px;
+    color: #fff;
+    border-radius: 6px;
+    margin-left: 30px;
+    transition: background 0.3s ease;
+}
+
+#botao:hover {
+    background: #ff2978;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    padding: 0 5%;
+    overflow: hidden;
+}
+
+/* Texto à esquerda */
+.textBox {
+    flex: 1;
+    max-width: 520px;
+    margin-right: 80px;
+}
+
+.textBox h1 {
+    font-size: 3rem;
+    color: #180f4a;
+    margin-bottom: 20px;
+}
+
+.textBox h2 {
+    font-size: 2rem;
+    color: #333;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.textBox p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.btn-cta {
+    display: inline-block;
+    background: #ff2978;
+    color: #fff;
+    padding: 14px 32px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-cta:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* Imagem à direita */
+.imgBox {
+    flex: 1.2;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.imgBox img {
+    width: 100%;
+    max-width: 1000px;
+    height: 85vh;
+    object-fit: cover;
+    border-radius: 30px 0 0 30px;
+    box-shadow: -30px 30px 60px rgba(0,0,0,0.3);
+}
+
+.sci {
+    width: 100px;
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.sci li {
+    list-style: none;
+}
+
+.sci li a {
+    display: inline-block;
+    color: #180f4a;
+    font-size: 40px;
+    transition: transform 0.3s ease, color 0.3s ease;
+    margin: 5px 0;
+}
+
+.sci li a:hover {
+    color: #ff2978;
+    transform: scale(1.2);
+}
+
+.circle {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 700px;
+    height: 700px;
+    background: #180f4a;
+    clip-path: circle(50% at right 30%);
+    z-index: -1;
+}
