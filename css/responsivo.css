@@ -1,0 +1,90 @@
+
+@media (max-width: 768px) {
+
+    header .navbar {
+        padding: 20px;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    header .menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header .menu li a {
+        margin-left: 0;
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    #botao {
+        margin-left: 0;
+    }
+
+    .content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .textBox {
+        margin-right: 0;
+        max-width: 100%;
+    }
+
+    .textBox h1 {
+        font-size: 2.2rem;
+    }
+
+    .textBox h2 {
+        font-size: 1.5rem;
+    }
+
+    .textBox p {
+        font-size: 1rem;
+    }
+
+    .imgBox {
+        margin-top: 30px;
+        justify-content: center;
+    }
+
+    .imgBox img {
+        width: 100%;
+        height: auto;
+    }
+
+    .sci {
+        position: static;
+        flex-direction: row;
+        width: 100%;
+        margin-top: 30px;
+        transform: none;
+    }
+
+    .sci li a {
+        font-size: 30px;
+        margin: 0 15px;
+    }
+
+    footer {
+        margin-top: 60px;
+        height: auto;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 1024px) {
+
+    section {
+        padding: 0 40px;
+    }
+
+    .textBox {
+        margin-right: 100px;
+    }
+
+    .imgBox img {
+        width: 100%;
+    }
+}
